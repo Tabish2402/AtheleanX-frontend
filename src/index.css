@@ -1,0 +1,16 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
