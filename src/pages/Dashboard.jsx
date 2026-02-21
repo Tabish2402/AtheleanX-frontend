@@ -59,9 +59,15 @@ backdrop-blur-sm shadow-lg shadow-black/20
           <h3 className="text-lg font-semibold mb-1">
             Workout Status
           </h3>
-         <p className="text-white/70">
+<button
+  onClick={() => navigate("/app/workout")}
+  disabled={!latestWorkout}
+  className={`text-left text-white/70 transition
+    ${latestWorkout ? "hover:text-white underline" : "opacity-50 cursor-not-allowed"}`}
+>
   {latestWorkout ? "Active workout plan" : "No active plan"}
-</p>
+</button>
+
 
         </div>
 
@@ -70,9 +76,15 @@ backdrop-blur-sm shadow-lg shadow-black/20
           <h3 className="text-lg font-semibold mb-1">
             Diet Status
           </h3>
-         <p className="text-white/70">
-  {hasDiet ? "Active diet plan" : "No active diet plan"}
-</p>
+        <button
+  onClick={() => navigate("/app/diet")}
+  disabled={!latestWorkout}
+  className={`text-left text-white/70 transition
+    ${latestWorkout ? "hover:text-white underline" : "opacity-50 cursor-not-allowed"}`}
+>
+  {latestWorkout ? "Active diet plan" : "No active plan"}
+</button>
+
         </div>
 
         <div className="bg-white/10 border border-white/10 border-t-8 border-t-primary p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300
@@ -93,7 +105,7 @@ backdrop-blur-sm shadow-lg shadow-black/20
           <h3 className="text-xl font-semibold mb-2">
             Build Your Plan
           </h3>
-          <p className="text-white/80">
+          <p className="text-white/80 text-lg">
             Create a workout and diet plan tailored to your body and goals.
           </p>
         </div>
@@ -111,7 +123,7 @@ backdrop-blur-sm shadow-lg shadow-black/20
 
         <button
   onClick={() => navigate("/app/coach")}
-  className="px-6 py-4 rounded-lg bg-primary text-black font-semibold
+  className="px-6 py-4 text-lg rounded-lg bg-primary text-black font-semibold
            transition-all duration-200
            hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/30
            active:scale-[0.98]"

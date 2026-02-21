@@ -3,6 +3,7 @@ import WorkoutResult from "./pages/WorkoutResult";
 import DietResult from "./pages/DietResult";
 import api from "./api/axios";
 import { useEffect } from "react";
+import DietCreate from "./pages/DietCreate";
 
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
@@ -12,6 +13,7 @@ import Dashboard from "./pages/Dashboard";
 import AICoach from "./pages/AICoach";
 import WorkoutPlan from "./pages/WorkoutPlan";
 import DietPlan from "./pages/DietPlan";
+import WorkoutCreate from "./pages/WorkoutCreate";
 
 import AppLayout from "./layouts/AppLayout";
 
@@ -36,10 +38,12 @@ export default function App() {
   {/* Workout */}
   <Route path="workout" element={<WorkoutPlan />} />
   <Route path="workout/result" element={<WorkoutResult />} />
+<Route path="workout/create" element={<WorkoutCreate />} />
 
   {/* Diet */}
   <Route path="diet" element={<DietPlan />} />
   <Route path="diet/result" element={<DietResult />} />
+    <Route path="diet/create" element={<DietCreate />} />
 </Route>
 
 

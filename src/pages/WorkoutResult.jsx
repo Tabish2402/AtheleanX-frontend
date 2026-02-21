@@ -27,8 +27,8 @@ useEffect(() => {
 
 if (loading) {
   return (
-    <div className="h-full flex items-center justify-center">
-      <p className="text-xl text-white/70">
+    <div className="h-full flex items-center ">
+      <p className="text-white/60 text-5xl animate-pulse">
         Loading your workout plan…
       </p>
     </div>
@@ -90,8 +90,8 @@ if (!plan) {
      <div className="flex justify-between items-center">
   <button
     onClick={() => {
-      localStorage.removeItem("workoutPlan");
-      navigate("/app/workout");
+      
+      navigate("/app/workout/create");
     }}
     className="px-6 py-6 text-xl rounded-lg bg-white/10 text-white/80
                hover:bg-white/20 transition"

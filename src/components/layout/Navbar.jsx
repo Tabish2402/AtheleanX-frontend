@@ -34,14 +34,14 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6">
           <Link
             to="/login"
-            className="px-5 py-3 rounded-md bg-primary text-black font-semibold hover:opacity-90 transition"
+            className="px-4 py-3 text-xl rounded-md bg-primary text-black font-semibold hover:opacity-90 transition"
           >
             Login
           </Link>
 
           <Link
             to="/signup"
-            className="px-5 py-3 rounded-md bg-primary text-black font-semibold hover:opacity-90 transition"
+            className="px-4 py-3 text-xl rounded-md bg-primary text-black font-semibold hover:opacity-90 transition"
           >
             Sign Up
           </Link>

@@ -25,7 +25,7 @@ useEffect(() => {
 
 
 if (loading) {
-  return <p className="text-white/70 text-xl flex items-center justify-center">Loading diet plan…</p>;
+  return <p className="text-white/60 text-5xl animate-pulse">Loading diet plan…</p>;
 }
 
 if (!plan) {
@@ -74,7 +74,7 @@ if (!plan) {
   <button
     onClick={() => {
       
-      navigate("/app/diet");
+      navigate("/app/diet/create");
     }}
     className="px-6 py-6 text-xl rounded-lg bg-white/10 text-white/80
                hover:bg-white/20 transition"

@@ -1,4 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   LayoutDashboard,
   Bot,
@@ -52,9 +53,11 @@ export default function AppLayout() {
           </button>
 
           {/* Logo */}
-          <h1 className="text-5xl font-bold mb-8">
-            Athe<span className="text-primary">LeanX</span>
-          </h1>
+          <Link to="/" className="mb-8">
+            <h1 className="text-5xl font-bold">
+              Athe<span className="text-primary">LeanX</span>
+            </h1>
+          </Link>
 
           {/* Navigation */}
           <nav className="flex flex-col gap-10">
@@ -96,10 +99,11 @@ export default function AppLayout() {
           {/* Logout */}
           <button
             onClick={() => {
-              localStorage.clear();
+             localStorage.removeItem("token");
+
               window.location.href = "/login";
             }}
-            className="mt-6 w-full px-5 py-4 rounded-xl text-lg
+            className="mt-6 w-full px-5 py-4 rounded-xl text-2xl
                        text-red-400 bg-red-500/10 hover:bg-red-500/20 transition"
           >
             Logout
