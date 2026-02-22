@@ -29,7 +29,7 @@ export default function Landing() {
 
       {/* Hero content */}
       <div className="relative z-10 max-w-3xl mx-auto text-center px-6">
-        <h1 className="text-9xl md:text-7xl font-bold text-white">
+        <h1 className="text-6xl md:text-5xl font-bold text-white">
           Train with <span className="text-primary">Intelligence</span>
         </h1>
 
@@ -40,7 +40,7 @@ export default function Landing() {
 
         <button
   onClick={() => navigate("/login")}
-  className="mt-8 px-8 py-4 rounded-md bg-primary text-bg text-2xl font-semibold hover:opacity-90 transition"
+  className="mt-8 px-5 py-5 rounded-md bg-primary text-bg text-xl font-semibold hover:opacity-90 transition"
 >
   Get Started
 </button>
