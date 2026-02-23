@@ -132,7 +132,7 @@ Changing them requires a redeploy (no code changes needed).
 ![Workout Plan](./screenshots/diet-result.png)
 
 ### Landing Page
-![Workout Result](./screenshots/landing.png)
+![landingpage](./screenshots/landingpage.png)
 
 ### Login Page
-![AI Coach](./screenshots/login.png)
+![AI Coach](./screenshots/loginpage.png)
