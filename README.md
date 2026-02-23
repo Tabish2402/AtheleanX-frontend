@@ -112,3 +112,27 @@ VITE_API_BASE_URL=https://<your-backend-domain>
 ```
 ### Environment variables are injected at build time.
 Changing them requires a redeploy (no code changes needed).
+---
+
+## 🖥️ Application Screenshots
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### Workout Plan Generation
+![Workout Plan](./screenshots/workout-generate.png)
+
+### Generated Workout Plan
+![Workout Result](./screenshots/workoutresult.png)
+
+### AI Coach
+![AI Coach](./screenshots/ai-coach.png)
+
+### Diet Page
+![Workout Plan](./screenshots/diet-result.png)
+
+### Landing Page
+![Workout Result](./screenshots/landing.png)
+
+### Login Page
+![AI Coach](./screenshots/login.png)
