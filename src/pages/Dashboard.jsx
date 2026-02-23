@@ -44,7 +44,7 @@ export default function Dashboard() {
 backdrop-blur-sm shadow-lg shadow-black/20
  p-6 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300
 ">
-        <h2 className="text-6xl font-bold">
+        <h2 className="text-5xl font-bold">
           Welcome Athlete 👋
         </h2>
         <p className="text-white/80 mt-2 text-lg ">
@@ -110,7 +110,7 @@ backdrop-blur-sm shadow-lg shadow-black/20
           </p>
         </div>
 
-        <div className="bg-white/10 border border-white/10 p-6 rounded-lg flex items-center justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300
+        <div className="bg-white/10 border border-white/10 p-2 rounded-lg flex items-center justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300
 ">
           <div>
             <h3 className="text-xl font-semibold mb-1">

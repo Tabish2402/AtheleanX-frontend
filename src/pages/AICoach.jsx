@@ -84,7 +84,7 @@ export default function AICoach() {
           messages.map((msg, index) => (
             <div
               key={index}
-              className={`w-fit max-w-[65%] p-4 rounded-xl text-lg leading-relaxed whitespace-pre-line
+              className={`w-fit max-w-[65%] p-2 rounded-xl text-lg leading-relaxed whitespace-pre-line
                 transition-all duration-300
                 ${
                   msg.role === "assistant"

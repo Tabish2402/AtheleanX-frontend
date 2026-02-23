@@ -48,9 +48,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile placeholder (future hamburger) */}
-        <div className="md:hidden text-white text-sm">
-          Menu
-        </div>
+        
       </nav>
     </header>
   );

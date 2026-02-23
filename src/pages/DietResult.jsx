@@ -76,7 +76,7 @@ if (!plan) {
       
       navigate("/app/diet/create");
     }}
-    className="px-6 py-6 text-xl rounded-lg bg-white/10 text-white/80
+    className="px-4 py-4 text-xl rounded-lg bg-white/10 text-white/80
                hover:bg-white/20 transition"
   >
     Regenerate Plan
@@ -84,7 +84,7 @@ if (!plan) {
 
   <button
     onClick={() => navigate("/app/coach")}
-    className="px-8 py-6 text-xl rounded-lg bg-primary text-black font-semibold
+    className="px-4 py-4 text-xl rounded-lg bg-primary text-black font-semibold
                hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/30
                active:scale-[0.98] transition-all"
   >
