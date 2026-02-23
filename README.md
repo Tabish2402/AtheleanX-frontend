@@ -1,16 +1,114 @@
-# React + Vite
+# 🏋️‍♂️ AtheLeanX Frontend 🧠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application for **AtheLeanX**, a schema-driven AI fitness platform.
 
-Currently, two official plugins are available:
+This frontend is responsible for:
+- User authentication (login/signup)
+- Collecting structured fitness inputs
+- Displaying AI-generated workout & diet plans
+- Rendering AI coach conversations
+- Managing user navigation and UX
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> ⚠️ This is **not a prompt-based AI UI**.  
+> Users never write prompts. All AI interaction is controlled by the backend.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧠 Design Philosophy
 
-## Expanding the ESLint configuration
+- No free-form prompting
+- No AI logic in frontend
+- Frontend consumes **validated API responses only**
+- Backend is the single source of truth
+- UI is final; only backend wiring is allowed
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 Tech Stack
+
+- **Framework**: React (JavaScript only)
+- **Build Tool**: Vite
+- **Styling**: TailwindCSS
+- **Routing**: React Router
+- **HTTP Client**: Axios
+- **State**: Local component state
+- **Auth Storage**: `localStorage` (JWT)
+
+---
+## 🔐 Authentication Flow
+
+- Signup and login are **separate**
+- **Signup** creates a user only (does not log in)
+- **Login** returns a JWT token
+- JWT is stored in `localStorage`
+- Axios automatically attaches the token to all requests
+
+### Protected Routes
+
+- All routes under `/app/*` require authentication
+- If the token is missing or invalid:
+  - Backend returns **401 Unauthorized**
+  - Frontend must redirect the user to **Login**
+
+---
+
+## 🔌 API Communication
+
+- All API requests go through a **centralized Axios instance**
+- Base URL is configured using:
+  
+  ```js
+  import.meta.env.VITE_API_BASE_URL
+  ```
+---
+##  Axios Interceptor
+### Automatically attaches the JWT to every request:
+```
+Authorization: Bearer <token>
+```
+### No request manually sets authentication headers
+---
+
+## 🤖 AI Interaction Model
+### Workout & Diet Plans
+
+User fills a structured form
+
+Frontend sends a strictly structured payload
+
+Backend returns schema-validated JSON
+
+Frontend only renders data
+
+No AI logic exists in the UI
+
+AI Coach
+
+Chat UI only
+
+Messages are sent as plain text
+
+Backend handles:
+
+Context loading (latest workout & diet)
+
+AI response generation
+
+Chat history persistence
+
+Frontend fetches chat history on page load
+
+---
+
+## 🌍 Environment Variables
+
+### Local Development(.env.local)
+```
+VITE_API_BASE_URL=http://localhost:8000
+```
+### Production (Vercel Environment Variables)
+```
+VITE_API_BASE_URL=https://<your-backend-domain>
+```
+### Environment variables are injected at build time.
+Changing them requires a redeploy (no code changes needed).
