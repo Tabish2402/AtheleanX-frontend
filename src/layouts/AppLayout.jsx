@@ -7,9 +7,10 @@ import {
   Utensils,
 } from "lucide-react";
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export default function AppLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="h-screen flex text-white relative overflow-hidden bg-bg">
@@ -101,7 +102,7 @@ export default function AppLayout() {
             onClick={() => {
              localStorage.removeItem("token");
 
-              window.location.href = "/login";
+              navigate("/login");
             }}
             className="mt-6 w-full px-5 py-4 rounded-xl text-2xl
                        text-red-400 bg-red-500/10 hover:bg-red-500/20 transition"
