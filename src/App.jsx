@@ -32,13 +32,13 @@ export default function App() {
         
         {/* App routes */}
         <Route path="/app" element={<AppLayout />}>
-  <Route path="dashboard" element={<Dashboard />} />
-  <Route path="coach" element={<AICoach />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="coach" element={<AICoach />} />
 
   {/* Workout */}
   <Route path="workout" element={<WorkoutPlan />} />
   <Route path="workout/result" element={<WorkoutResult />} />
-<Route path="workout/create" element={<WorkoutCreate />} />
+  <Route path="workout/create" element={<WorkoutCreate />} />
 
   {/* Diet */}
   <Route path="diet" element={<DietPlan />} />
