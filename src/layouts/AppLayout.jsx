@@ -125,7 +125,7 @@ export default function AppLayout() {
       <main
         className="relative z-10 flex-1 p-6 md:p-8
                    bg-bg/10 overflow-y-auto
-                   pt-30 md:pt-8"
+                   pt-32 md:pt-8"
       >
         <div className="animate-fade-in">
           <Outlet />
