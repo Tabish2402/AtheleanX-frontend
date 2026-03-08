@@ -21,7 +21,7 @@ export default function AppLayout() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.05)_1px,transparent_0)] bg-[size:26px_26px] opacity-30 pointer-events-none" />
 
       {/* Mobile Header */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-20
+      <div className="md:hidden fixed top-0 left-0 right-0 z-30
                       flex items-center justify-between px-5 py-4
                       bg-bg/90 backdrop-blur border-b border-white/10">
         <h1 className="text-xl font-bold">
@@ -125,7 +125,7 @@ export default function AppLayout() {
       <main
         className="relative z-10 flex-1 p-6 md:p-8
                    bg-bg/10 overflow-y-auto
-                   pt-20 md:pt-8"
+                   pt-24 md:pt-8"
       >
         <div className="animate-fade-in">
           <Outlet />
